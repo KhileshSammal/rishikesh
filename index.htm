@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>4-Day Trip: Delhi to Uttarakhand</title>
 
@@ -13,6 +14,10 @@
       background: #f4f4f4;
       color: #333;
       scroll-behavior: smooth;
+      body {
+  font-family: 'Poppins', sans-serif;
+}
+
     }
 
     header {
@@ -40,7 +45,24 @@
       gap: 1.5rem;
       margin-top: 2rem;
     }
+    .gallery {
+  width: 288px; 
+  height: 360px; 
+  overflow: hidden; /* Hide any overflow */
+}
 
+.video-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.image-fit {
+  width: 100%; /* Makes the image fill the container */
+  height: 100%; /* Makes the image fill the container */
+  object-fit: cover; /* Maintains aspect ratio without distortion */
+}
     .gallery img, .video-gallery iframe {
       width: 100%;
       border-radius: 12px;
@@ -99,9 +121,9 @@
     </p>
   
     <!-- # Har Ki Pauri Image -->
-    <div class="gallery">
-      <img src="ticket.jpg" alt="Har Ki Pauri Morning Bath">
-    </div>
+<div class="gallery">
+  <img src="assets/ticket.jpg" alt="Har Ki Pauri Morning Bath" class="image-fit">
+</div>
   
     <p>
       After the rejuvenating morning ritual, walk to the <strong>Udan Khatola Ropeway</strong> and ascend to the divine <strong>Mansa Devi Temple</strong>.
@@ -147,9 +169,9 @@
   <section>
     <h2>Rishikesh Mornings – Ghats & Yoga</h2>
     <div class="gallery">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,ghats" alt="Ganga Ghats">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,yoga" alt="Yoga in Rishikesh">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,temple" alt="Temples in Rishikesh">
+      <img src="assets/rafting.jpeg" alt="rafting" class="image-fit">
+      <img src="assets/rafting2.jpeg" alt="rafting" class="image-fit">
+      <img src="https://source.unsplash.com/800x600/?rishikesh,temple" alt="Temples in Rishikesh" class="image-fit">
     </div>
   </section>
   
@@ -181,13 +203,16 @@
     </div>
   </section>
   
-  <!-- # Rishikesh Video 2: River Rafting Adventure -->
-  <section>
-    <h2>Watch: River Rafting Adventure</h2>
-    <div class="video-gallery">
-      <iframe src="https://www.youtube.com/embed/qYqW5I4n35g" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
+<!-- # Rishikesh Video 2: River Rafting Adventure -->
+<section>
+  <h2 style="text-align: center;">Watch: River Rafting Adventure</h2>
+  <div class="video-gallery" style="text-align: center; position: relative;">
+    <video class="hover-play-video" width="640" height="360" playsinline preload="none" controls style="max-width: 100%; border: 2px solid #ddd; display: block; margin: 0 auto;">
+      <source src="assets/raftingvideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
   
   <!-- # Rishikesh Image Gallery 3: Ganga Aarti & Cafes -->
   <section>
@@ -283,6 +308,33 @@
   </div>
 </section>
 
+<!-- # script to control video -->
+
+<script>
+  const videos = document.querySelectorAll('.hover-play-video');
+
+  videos.forEach(video => {
+    // Play on hover
+    video.addEventListener('mouseenter', () => {
+      videos.forEach(v => {
+        if (v !== video) v.pause(); // Pause other videos
+      });
+      video.play();
+    });
+  });
+
+  // Pause when scrolled out of view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) {
+        entry.target.pause();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  videos.forEach(video => observer.observe(video));
+</script>
+
 <!-- # Footer -->
 import { Mail, Phone, Instagram } from "lucide-react";
 
@@ -316,3 +368,4 @@ import { Mail, Phone, Instagram } from "lucide-react";
 </footer>
 
   
+
