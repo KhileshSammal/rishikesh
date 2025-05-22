@@ -1,113 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>4-Day Trip: Delhi to Uttarakhand</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Epic 4-Day Uttarakhand Adventure: Delhi to the Himalayas</title>
 
-  <!-- # CSS Styling and Animations -->
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      scroll-behavior: smooth;
-      body {
-  font-family: 'Poppins', sans-serif;
-}
+<style>
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fcfcb5; /* clean off-white */
+    color: #2c3e50; /* dark slate blue for text */
+    scroll-behavior: smooth;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
 
-    }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 2rem 3rem 2rem;
+  }
 
-    header {
-      background: linear-gradient(to right, #4e54c8, #8f94fb);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-      animation: fadeInDown 2s ease;
-    }
+  header {
+    background: #4f6b88; /* deep blue */
+    color: #fac73c; /* warm golden */
+    padding: 3rem 2rem;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.1);
+    animation: fadeInDown 1.8s ease forwards;
+    margin-bottom: 2.5rem;
+  }
 
-    section {
-      padding: 3rem 2rem;
-      animation: fadeIn 1.5s ease;
-    }
+  header h1 {
+    font-weight: 900;
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgb(240 192 64 / 0.6);
+  }
 
-    h2 {
-      color: #4e54c8;
-      text-align: center;
-      margin-bottom: 1rem;
-    }
-
-    .gallery, .video-gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-      margin-top: 2rem;
-    }
-    .gallery {
-  width: 288px; 
-  height: 360px; 
-  overflow: hidden; /* Hide any overflow */
-}
-
-.video-gallery {
+ header p {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  gap: 0.5rem;
+  font-weight: 500;
+  font-size: 1.3rem;
+  font-style: italic;
+  color: #f4f6f7;
+  letter-spacing: 0.04em;
 }
 
-.image-fit {
-  width: 100%; /* Makes the image fill the container */
-  height: 100%; /* Makes the image fill the container */
-  object-fit: cover; /* Maintains aspect ratio without distortion */
-}
-    .gallery img, .video-gallery iframe {
-      width: 100%;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-      transition: transform 0.4s;
-    }
+  h2 {
+    color: #f0c040; /* golden accent */
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 2rem 0 1rem 0;
+    text-shadow: 0 0 6px rgb(240 192 64 / 0.35);
+  }
 
-    .gallery img:hover, .video-gallery iframe:hover {
-      transform: scale(1.05);
-    }
+  p {
+    max-width: 650px;
+    margin: 0 auto 2rem auto;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #3a4e6f; /* muted dark blue */
+  }
 
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      animation: fadeInUp 2s ease;
-    }
+  .gallery, .video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.8rem;
+    margin: 2rem 0;
+  }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  .gallery img, .video-gallery iframe {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgb(192 160 64 / 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
 
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+  .gallery img:hover, .video-gallery iframe:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgb(240 192 64 / 0.45);
+  }
 
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+  footer {
+    background: #2c3e50;
+    color: #f0c040;
+    text-align: center;
+    padding: 2rem;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    border-radius: 0 0 12px 12px;
+    animation: fadeInUp 2s ease forwards;
+    margin-top: 3rem;
+  }
+
+  /* Animations */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+  }
+
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2.2rem;
     }
-  </style>
+    h2 {
+      font-size: 1.9rem;
+    }
+    .gallery, .video-gallery {
+      grid-template-columns: 1fr;
+      gap: 1.2rem;
+    }
+  }
+</style>
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Epic 4-Day Uttarakhand Adventure</h1>
+      <p>From Delhi to the Majestic Himalayas — Explore, Experience, Elevate</p>
+    </header>
 
-<!-- # Header Section -->
-<header>
-  <h1>4-Day Trip: Delhi → Haridwar → Rishikesh → Mussoorie → Dehradun → Delhi (WeekEnd Escape)</h1>
-  <p>Explore the spiritual and scenic beauty of Uttarakhand</p>
-</header>
+    <section>
+      <h2>Your Ultimate Weekend Escape Plan</h2>
+      <p>
+        Immerse yourself in the spiritual aura of Haridwar, thrill in the white waters of Rishikesh,
+        soak in breathtaking views of Mussoorie, and unwind in Dehradun’s serene charm — all packed
+        in one unforgettable weekend!
+      </p>
+    </section>
 
 <!-- # Day 1: Delhi to Haridwar -->
-<!-- # Day 1: Delhi to Haridwar -->
+
 <section>
     <h2>Day 1: Delhi to Haridwar</h2>
     <p>
@@ -120,11 +159,88 @@
       Take a holy dip (<em>snaan</em>) in the Ganges, believed to wash away sins and purify the soul.
     </p>
   
-    <!-- # Har Ki Pauri Image -->
-<div class="gallery">
-  <img src="assets/ticket.jpg" alt="Har Ki Pauri Morning Bath" class="image-fit">
-</div>
   
+<!-- # Har Ki Pauri Image ---- responsive images added ---- completed final -->
+<style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/haridwar/ganga-snan.jpeg" target="_blank">
+      <img src="assets//haridwar/ganga-snan.jpeg" alt="Ganga Snan at Har Ki Pauri">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/haridwar/mansa-devi.jpeg" target="_blank">
+      <img src="assets/haridwar/mansa-devi.jpeg" alt="Mansa Devi Temple">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/ticket.JPG" target="_blank">
+      <img src="assets/ticket.JPG" alt="Third Place">
+    </a>
+  </div>
+</div>
+
+<!-- written information -->
     <p>
       After the rejuvenating morning ritual, walk to the <strong>Udan Khatola Ropeway</strong> and ascend to the divine <strong>Mansa Devi Temple</strong>.
       The ride gives you a panoramic view of the city and river. Seek blessings and enjoy the peaceful aura atop the hill.
@@ -134,10 +250,11 @@
       Return to the base by <strong>10:00 AM</strong>, and take a short stroll or rickshaw ride to the local markets.
       Have a fulfilling North Indian breakfast—<em>aloo puri, kachori sabzi, jalebi, or lassi</em> at a popular Haridwar dhaba.
     </p>
+
   
     <!-- # Haridwar Video: Morning Experience & Ropeway -->
     <section>
-      <h2>Watch: Haridwar Ropeway & Ghat Experience</h2>
+      <h2>Watch: Haridwar Ropeway Experience</h2>
       <div class="video-gallery">
         <iframe src="https://www.youtube.com/embed/UgQgFtMHyxQ" frameborder="0" allowfullscreen></iframe>
       </div>
@@ -165,16 +282,86 @@
     </p>
   </section>
   
-  <!-- # Rishikesh Image Gallery 1: Ghats & Yoga -->
-  <section>
-    <h2>Rishikesh Mornings – Ghats & Yoga</h2>
-    <div class="gallery">
-      <img src="assets/rafting.jpeg" alt="rafting" class="image-fit">
-      <img src="assets/rafting2.jpeg" alt="rafting" class="image-fit">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,temple" alt="Temples in Rishikesh" class="image-fit">
-    </div>
-  </section>
-  
+  <!-- # Rishikesh Image Gallery 1: Ghats & Yoga ---------------- working -->
+
+<style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/rishikesh/rafting.jpeg" target="_blank">
+      <img src="assets/rishikesh/rafting.jpeg" alt="rafting">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/rishikesh/rafting2.jpeg" target="_blank">
+      <img src="assets/rishikesh/rafting2.jpeg" alt="Mansa Devi Temple">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/rishikesh/laxman-jhula.jpeg" target="_blank">
+      <img src="assets/rishikesh/laxman-jhula.jpeg" alt="Third Place">
+    </a>
+  </div>
+</div>
+
   <!-- # Rishikesh Video 1: Morning Vibes -->
   <section>
     <h2>Experience Rishikesh Morning Vibes</h2>
@@ -196,13 +383,96 @@
   <!-- # Rishikesh Image Gallery 2: River Rafting -->
   <section>
     <h2>Thrilling Moments: River Rafting</h2>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/800x600/?river-rafting,india" alt="Rafting 1">
-      <img src="https://source.unsplash.com/800x600/?rafting,rishikesh" alt="Rafting 2">
-      <img src="https://source.unsplash.com/800x600/?ganges,rafting" alt="Rafting 3">
-    </div>
+    <style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/rishikesh/rafting.jpeg" target="_blank">
+      <img src="assets/rishikesh/rafting.jpeg" alt="rafting">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/rishikesh/rafting2.jpeg" target="_blank">
+      <img src="assets/rishikesh/rafting2.jpeg" alt="Mansa Devi Temple">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/rishikesh/laxman-jhula.jpeg" target="_blank">
+      <img src="assets/rishikesh/laxman-jhula.jpeg" alt="Third Place">
+    </a>
+  </div>
+</div>
   </section>
-  
+
+  <!-- # Rishikesh Video 2: River Rafting Adventure -->
+<section>
+ <h2>Watch: River Rafting Adventure</h2>
+            <div class="video-gallery">
+                <video class="hover-play-video" width="640" height="360" playsinline preload="none" controls style="max-width: 100%; border: 2px solid #ddd; display: block; margin: 0 auto;">
+                    <source src="assets/raftingv.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+</section>
+
 <!-- # Rishikesh Video 2: River Rafting Adventure -->
 <section>
   <h2 style="text-align: center;">Watch: River Rafting Adventure</h2>
@@ -217,11 +487,77 @@
   <!-- # Rishikesh Image Gallery 3: Ganga Aarti & Cafes -->
   <section>
     <h2>Evening Beauty: Ganga Aarti & Café Culture</h2>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,ganga-aarti" alt="Ganga Aarti">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,cafe" alt="Rishikesh Café">
-      <img src="https://source.unsplash.com/800x600/?rishikesh,night" alt="Night view Rishikesh">
-    </div>
+     <style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/haridwar/ganga-snan.jpeg" target="_blank">
+      <img src="assets//haridwar/ganga-snan.jpeg" alt="Ganga Snan at Har Ki Pauri">
+    </a>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="assets/ticket.JPG" target="_blank">
+      <img src="assets/ticket.JPG" alt="Third Place">
+    </a>
+  </div>
+</div>
   </section>  
 
 <!-- # Day 3: Mussoorie (Stay) -->
@@ -240,9 +576,77 @@
     </p>
   
     <!-- # Scooty Rental Image -->
-    <div class="gallery">
-      <img src="https://source.unsplash.com/800x600/?scooty,rent,dehradun" alt="Scooty Rental Dehradun">
-    </div>
+    <style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/haridwar/ganga-snan.jpeg" target="_blank">
+      <img src="assets//haridwar/ganga-snan.jpeg" alt="Ganga Snan at Har Ki Pauri">
+    </a>
+  </div>
+  
+  <div class="gallery-item">
+    <a href="assets/ticket.JPG" target="_blank">
+      <img src="assets/ticket.JPG" alt="Third Place">
+    </a>
+  </div>
+</div>
   
     <p>
       Before heading up the hills, stop at the iconic <strong>Ghanta Ghar</strong> (Clock Tower) and treat yourself
@@ -286,9 +690,83 @@
   <h2>Day 4: Mussoorie to Dehradun (Stay)</h2>
   <p>Explore Robber's Cave, Sahastradhara, and local food in Dehradun.</p>
   <div class="gallery">
-    <img src="https://source.unsplash.com/dehradun" alt="Dehradun 1">
-    <img src="https://source.unsplash.com/cave" alt="Dehradun 2">
+    <style>
+  /* Gallery container styling */
+  .gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    flex-wrap: wrap;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%; /* ensure container uses full available width */
+  }
+
+  /* Each image box (card) */
+  .gallery-item {
+    flex: 1 1 calc(33.33% - 25px);
+    max-width: calc(33.33% - 25px); /* limit max width per box */
+    height: 450px;  /* fixed height to keep square */
+    box-sizing: border-box;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s;
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Hover effect */
+  .gallery-item:hover {
+    transform: scale(1.03);
+    border-color: #555;
+  }
+
+  /* Image styling - fill container fully, square */
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .gallery-item {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+    }
+    .gallery-item img {
+      height: auto;
+    }
+  }
+</style>
+
+<!-- Image gallery with 3 images -->
+<div class="gallery">
+  <div class="gallery-item">
+    <a href="assets/haridwar/ganga-snan.jpeg" target="_blank">
+      <img src="assets//haridwar/ganga-snan.jpeg" alt="Ganga Snan at Har Ki Pauri">
+    </a>
   </div>
+
+  <div class="gallery-item">
+    <a href="assets/haridwar/mansa-devi.jpeg" target="_blank">
+      <img src="assets/haridwar/mansa-devi.jpeg" alt="Mansa Devi Temple">
+    </a>
+  </div>
+
+  <div class="gallery-item">
+    <a href="assets/ticket.JPG" target="_blank">
+      <img src="assets/ticket.JPG" alt="Third Place">
+    </a>
+  </div>
+</div>
 </section>
 
 <!-- # Video 3: Dehradun Memories -->
@@ -335,8 +813,25 @@
   videos.forEach(video => observer.observe(video));
 </script>
 
+  <!-- Sample Section -->
+  <section>
+    <h2>Your Ultimate Weekend Escape Plan</h2>
+    <p style="max-width:600px; margin: 0 auto; font-weight: 400; font-size: 1.1rem; text-align:center; color:#3a4e6f;">
+      Immerse yourself in the spiritual aura of Haridwar, thrill in the white waters of Rishikesh, soak in breathtaking views of Mussoorie, and unwind in Dehradun’s serene charm — all packed in one unforgettable weekend!
+    </p>
+  </section>
+
+  <!-- You can add your gallery, videos, and more content below -->
+
+  <footer>
+    <p>Adventure Awaits — Dare to Discover!</p>
+  </footer>
+</div>
+
+</body>
+</html>
+
 <!-- # Footer -->
-import { Mail, Phone, Instagram } from "lucide-react";
 
 <footer className="bg-gray-100 p-6 rounded-lg mt-6">
   <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-700">
@@ -366,6 +861,3 @@ import { Mail, Phone, Instagram } from "lucide-react";
     </div>
   </div>
 </footer>
-
-  
-
