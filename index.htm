@@ -129,6 +129,183 @@
   }
 </style>
 </head>
+
+<!--==================== HEADER ====================-->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Khilesh Sammal</title>
+
+  <!-- Unicons Icon Library -->
+  <link href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" rel="stylesheet">
+
+  <style>
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Header */
+    .header {
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .nav__logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      text-decoration: none;
+      color: #2c3e50;
+    }
+
+    .nav__list {
+      display: flex;
+      gap: 1.5rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav__link {
+      text-decoration: none;
+      color: #2c3e50;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav__link:hover {
+      color: #007bff;
+    }
+
+    .nav__icon {
+      font-size: 1.1rem;
+    }
+
+    .change-theme {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+
+    .change-theme:hover {
+      color: #007bff;
+    }
+
+    /* Dark Theme */
+    body.dark-theme {
+      background-color: #121212;
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .nav__logo,
+    body.dark-theme .nav__link,
+    body.dark-theme .change-theme {
+      color: #f5f5f5;
+    }
+
+    body.dark-theme .nav__link:hover,
+    body.dark-theme .change-theme:hover {
+      color: #0d6efd;
+    }
+
+    @media (max-width: 768px) {
+      .nav__list {
+        flex-direction: column;
+        background: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        display: none;
+        padding: 1rem;
+      }
+
+      .nav__list.active {
+        display: flex;
+      }
+
+      .nav__toggle {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+      }
+    }
+
+    .nav__toggle {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <nav class="nav container">
+    <a href="#" class="nav__logo">Khilesh Sammal</a>
+
+    <ul class="nav__list" id="nav-list">
+      <li><a href="#home" class="nav__link"><i class="uil uil-estate nav__icon"></i>Home</a></li>
+      <li><a href="#about" class="nav__link"><i class="uil uil-user nav__icon"></i>About</a></li>
+      <li><a href="#Haridwar" class="nav__link"><i class="uil uil-briefcase-alt nav__icon"></i>Haridwar</a></li>
+      <li><a href="#Rishikesh" class="nav__link"><i class="uil uil-file-alt nav__icon"></i>Rishikesh</a></li>
+      <li><a href="#Rafting" class="nav__link"><i class="uil uil-scenery nav__icon"></i>Rafting</a></li>
+      <li><a href="#contact" class="nav__link"><i class="uil uil-message nav__icon"></i>Contact</a></li>
+    </ul>
+
+    <!-- Theme toggle & Menu toggle -->
+    <div class="nav__btns">
+      <i class="uil uil-moon change-theme" id="theme-button" title="Toggle Dark/Light Mode"></i>
+      <i class="uil uil-apps nav__toggle" id="nav-toggle"></i>
+    </div>
+  </nav>
+</header>
+
+<script>
+  // Theme Toggle
+  const themeButton = document.getElementById('theme-button');
+  const darkThemeClass = 'dark-theme';
+  const iconMoon = 'uil-moon';
+  const iconSun = 'uil-sun';
+
+  // Load previously selected theme
+  if (localStorage.getItem('selected-theme') === 'dark') {
+    document.body.classList.add(darkThemeClass);
+    themeButton.classList.replace(iconMoon, iconSun);
+  }
+
+  themeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkThemeClass);
+    if (document.body.classList.contains(darkThemeClass)) {
+      themeButton.classList.replace(iconMoon, iconSun);
+      localStorage.setItem('selected-theme', 'dark');
+    } else {
+      themeButton.classList.replace(iconSun, iconMoon);
+      localStorage.setItem('selected-theme', 'light');
+    }
+  });
+
+  // Responsive Nav Toggle
+  const navToggle = document.getElementById('nav-toggle');
+  const navList = document.getElementById('nav-list');
+
+  navToggle.addEventListener('click', () => {
+    navList.classList.toggle('active');
+  });
+</script>
+        
 <body>
   <div class="container">
     <header>
@@ -147,7 +324,7 @@
 
 <!-- # Day 1: Delhi to Haridwar -->
 
-<section>
+<section> <section class="Delhi to Haridwar" id="Haridwar"></section>  <!-- # header scroll code -->
     <h2>Day 1: Delhi to Haridwar</h2>
     <p>
       Your spiritual adventure begins at <strong>12:00 AM</strong> midnight from Delhi. Travel overnight by car, bus, or train,
@@ -272,7 +449,7 @@
   
 <!-- # Day 2: Rishikesh (Stay) -->
 <!-- # Day 2: Haridwar to Rishikesh (Stay) -->
-<section>
+<section> <section class="Rishikesh" id="Rishikesh"></section>
     <h2>Day 2: Haridwar to Rishikesh (Stay)</h2>
     <p>
       After a peaceful morning in Haridwar, head to the spiritual and adventure-packed town of Rishikesh.
@@ -371,7 +548,7 @@
   </section>
   
   <!-- # River Rafting Highlight -->
-  <section>
+  <section> <section class="Rishikesh Rafting" id="Rafting"></section>
     <h2>Adrenaline Rush – River Rafting on the Ganga</h2>
     <p>
       Rishikesh is one of India’s top destinations for white-water rafting.
@@ -832,32 +1009,149 @@
 </html>
 
 <!-- # Footer -->
+ <!-- footer.html -->
+<footer class="footer">
+  <section class="contact" id="contact"></section>
 
-<footer className="bg-gray-100 p-6 rounded-lg mt-6">
-  <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-gray-700">
-    <div className="text-center md:text-left">
-      <p className="font-semibold">Contact Us</p>
-      <div className="flex items-center gap-2 mt-1">
-        <Mail className="w-4 h-4" />
-        <a href="mailto:contact@ashva.fit" className="hover:underline">contact@ashva.fit</a>
+  <div class="footer-content">
+    <div class="contact-info">
+      <p class="footer-title">Contact Us</p>
+      <div class="contact-item">
+        <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Mail Icon" width="18" height="18" />
+        <a href="mailto:khileshsammal.work@gmail.com" class="footer-link">khileshsammal.work@gmail.com</a>
       </div>
-      <div className="flex items-center gap-2 mt-1">
-        <Phone className="w-4 h-4" />
-        <a href="tel:+917505809379" className="hover:underline">+917505809379</a>
+      <div class="contact-item" style="margin-top: 4px;">
+        <img src="https://cdn-icons-png.flaticon.com/512/597/597177.png" alt="Phone Icon" width="18" height="18" />
+        <a href="tel:+917505809379" class="footer-link">+91 75058 09379</a>
       </div>
     </div>
 
-    <div className="text-center md:text-right mt-4 md:mt-0">
-      <p className="font-semibold mb-1">Follow Us</p>
-      <a
-        href="https://instagram.com/mr.khilesh__"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 hover:text-pink-600"
-      >
-        <Instagram className="w-5 h-5" />
+    <div class="social-info">
+      <p class="footer-title">Follow Us</p>
+      <a href="https://instagram.com/mr.khilesh__" target="_blank" class="social-link">
+        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram Icon" width="20" height="20" />
         @Mr.khilesh__
       </a>
     </div>
   </div>
 </footer>
+
+<!-- Scroll to Top Button -->
+<button id="scrollToTopBtn" aria-label="Scroll to top">↑ Top</button>
+
+<style>
+  /* Footer container styles */
+  .footer {
+    background-color: #1a202c; /* dark gray */
+    color: #d1d5db;            /* light gray */
+    padding: 40px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 0.375rem; /* 6px rounded corners */
+  }
+
+  /* Flex container */
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: center;
+  }
+
+  /* For wider screens */
+  @media (min-width: 768px) {
+    .footer-content {
+      flex-direction: row;
+      align-items: center;
+    }
+    .contact-info {
+      text-align: left;
+    }
+    .social-info {
+      text-align: right;
+    }
+  }
+
+  .contact-info,
+  .social-info {
+    flex: 1;
+  }
+
+  /* Section titles */
+  .footer-title {
+    font-weight: 700;
+    color: white;
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .footer-link,
+  .social-link {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .footer-link:hover {
+    color: #60a5fa; /* blue-400 */
+  }
+  .social-link:hover {
+    color: #f472b6; /* pink-400 */
+  }
+
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* Scroll to Top Button styles */
+  #scrollToTopBtn {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background-color: #2563eb; /* blue-600 */
+    color: white;
+    font-weight: 600;
+    padding: 10px 16px;
+    border-radius: 9999px; /* full rounded */
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: none; /* hidden by default */
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    z-index: 1000; /* above other content */
+  }
+  #scrollToTopBtn:hover {
+    background-color: #1e40af; /* blue-800 */
+  }
+</style>
+
+<script>
+  // Select the button
+  const scrollBtn = document.getElementById('scrollToTopBtn');
+
+  // Show button when user scrolls down 100px
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      scrollBtn.style.display = 'block';
+    } else {
+      scrollBtn.style.display = 'none';
+    }
+  });
+
+  // Smooth scroll to top on button click
+  scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
